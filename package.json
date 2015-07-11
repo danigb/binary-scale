@@ -1,0 +1,31 @@
+{
+  "name": "binary-scale",
+  "version": "0.1.0",
+  "description": "A musical scale implemented with binary numbers",
+  "main": "scale.js",
+  "scripts": {
+    "test": "vows test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/binary-scale.git"
+  },
+  "keywords": [
+    "scale",
+    "scales",
+    "music",
+    "theory",
+    "midi",
+    "note",
+    "notes"
+  ],
+  "author": "danigb <danigb@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/binary-scale/issues"
+  },
+  "homepage": "https://github.com/danigb/binary-scale#readme",
+  "devDependencies": {
+    "vows": "^0.8.1"
+  }
+}
