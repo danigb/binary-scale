@@ -5,7 +5,7 @@ module.exports = Scale
 function Scale (num) {
   var scale = (this instanceof Scale) ? this : {}
   scale.decimal = validate(num)
-  scale.binary = num.toString(2)
+  scale.binary = scale.decimal.toString(2)
   scale.length = scale.binary.match(/1/g).length
   scale.steps = scale.binary.match(/1(0)*/g).map(function (o) { return o.length })
   scale.leap = Math.max.apply(Math, scale.steps)
@@ -19,7 +19,8 @@ Scale.MAX = 4096
 
 function validate (num) {
   if (!/^\d+$/) throw Error('Not valid scale num: ' + num)
-  if (num < Scale.MIN || num >= Scale.MAX) throw Error('Scale num out of bounds')
+  num = +num
+  if (num < Scale.MIN || num >= Scale.MAX) throw Error('Scale num out of bounds: ' + num)
   return num
 }
 

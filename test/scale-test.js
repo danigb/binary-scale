@@ -3,8 +3,11 @@ var assert = require('assert')
 var Scale = require('../')
 
 vows.describe('Scale').addBatch({
-  'constructor': function () {
+  'create scale': function () {
     assert(Scale(2773))
+  },
+  'create scale with string': function () {
+    assert.equal(Scale('2773').decimal, 2773)
   },
   'binary': function () {
     assert.equal(Scale(2773).binary, '101011010101')
