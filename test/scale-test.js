@@ -31,5 +31,11 @@ vows.describe('Scale').addBatch({
       '101101011010',
       '110101101010'
     ])
+  },
+  'root mode': function () {
+    var major = Scale(2773)
+    major.modes.forEach(function (mode) {
+      assert.equal(Scale(parseInt(mode, 2)).rootMode, major.rootMode)
+    })
   }
 }).export(module)

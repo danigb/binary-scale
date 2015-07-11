@@ -28,6 +28,7 @@ The method receives an integer and returns an object with the following attribut
 - steps: an array with the distance in semitones between the notes of the scale
 - leap: the maximum distance between notes of the scale
 - modes: an array of binary strings with all the possible modes of this scale
+- rootMode: a binary string representing the root mode that generates the rest of the modes. The rootMode of all the modes of the same scale is the same
 
 If the number is below Scale.MIN or bigger than Scale.MAX an exception is thrown.
 

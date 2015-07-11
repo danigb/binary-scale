@@ -12,6 +12,7 @@ function Scale (num) {
   scale.modes = Array.apply(null, Array(12))
     .map(function (a, i) { return rotate(scale.binary, i) })
     .filter(function (binary) { return binary[0] === '1' })
+  scale.rootMode = scale.modes.slice().sort()[0]
   return scale
 }
 Scale.MIN = 2048
