@@ -2,9 +2,7 @@
 
 A (western well tempered) scale implemented with binary numbers.
 
-__IMPORTANT: This is a low-level library. Probably you'll use [music-scale](http://github.com/danigb/music-scale)__
-
-You can see a demo here: http://danigb.github.io/scales
+## Deprecated: the code of this library is now part of [tonal](https://github.com/danigb/tonal)
 
 ## Usage
 
